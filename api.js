@@ -3,7 +3,7 @@ const apiKey = "058fba36a192a4c4dc7264f33a2f31ce"
 
 
 function weatherCity(city){
-    let weatherUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+    let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     fetch(weatherUrl).then((res)=>{
         return res.json()
     }).then((data=>{
