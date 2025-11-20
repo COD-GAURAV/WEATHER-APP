@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Weather</h1>
+
+      <!-- Search (static UI only) -->
+      <form class="search">
+        <input type="text" placeholder="Search city (static)" aria-label="Search city" id="searchInput" autocorrect="off">
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <!-- Current weather card -->
+    <section class="card current">
+      <div class="current-left">
+        <!-- Simple SVG weather icon (sun + cloud) -->
+        <div class="icon sunny" aria-hidden="true">
+          <img alt="" id="icon">
+        </div>
+        <div class="location">
+          <h2 class="city" title="Click and Know about This city"></h2>
+          <p class="desc"></p>
+        </div>
+      </div>
+
+      <div class="current-right">
+        <div class="temp"></div>
+        <div class="meta">
+          <div class="feel"></div>
+          <div class="humidity"></div>
+          <div id="Wind"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="forecast">
+      <article class="day">
+        <div class="d-name" id="lan">Latitude</div>
+        <div class="d-icon">🌍</div>
+        <div class="d-temp" id="lanM"></div>
+      </article>
+      <article class="day">
+        <div class="d-name" id="log">Longitude</div>
+        <div class="d-icon">🌍</div>
+        <div class="d-temp" id="logM"></div>
+      </article>
+      <article class="day">
+        <div class="d-name">Visibility</div>
+        <div class="d-icon">👁️👁️</div>
+        <div class="d-temp" id="visL">28° / 22°</div>
+      </article>
+     <article class="day">
+        <div class="d-name" id="temp_max">Temp Max</div>
+        <div class="d-icon">💨</div>
+        <div class="d-temp" id="temp_maxM"></div>
+      </article>
+      <article class="day">
+        <div class="d-name" id="temp_min">Temp Min</div>
+        <div class="d-icon">💨</div>
+        <div class="d-temp" id="temp_minM"></div>
+      </article>
+    </section>
+
+  <div class="popup" id="popupBox">
+    <div class="popup-content">
+        <p>City not found</p>
+    </div>
+</div>
+    <!-- small footer note -->
+    <footer class="note">
+      <small>Weather data shown in this app may not be 100% accurate. Made with ❤️ by Gaurav Kumar</small>
+    </footer>
+  </main>
+</body>
+<script src="api.js"></script>
+</html>
