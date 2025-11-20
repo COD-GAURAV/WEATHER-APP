@@ -75,6 +75,7 @@ function renderApi(arr){
     
     const form = document.querySelector(".search")
     const searchInput = document.getElementById("searchInput")
+    const switchMode = document.getElementById("switchMode")
     form.addEventListener("submit",(e)=>{
         e.preventDefault()
         let value = searchInput.value.trim() 
@@ -83,4 +84,24 @@ function renderApi(arr){
             
         searchInput.value = ""
     })
+
+    // switchMode.addEventListener("click",(e)=>{
+        
+    //     if(switchMode.textContent === "🌙"){
+    //         document.querySelector("body").style.background = "linear-gradient(180deg, #dff3ff 0%, var(--bg) 100%)"
+    //         switchMode.textContent = "☀️"
+    //         switchMode.style.background = ``
+    //         document.querySelector(".app").style.background = "white"
+    //         searchInput.style.border = `1px solid rgba(0, 0, 0, 0.08)`
+    //         document.querySelector("#pop").style.color = "black"
+    //     }
+    //     else{
+    //         document.querySelector("body").style.background = "black"
+    //         switchMode.textContent = "🌙"
+    //         document.querySelector(".app").style.background = "rgba(255, 255, 255, 0.6)"
+    //         switchMode.style.background = `black`
+    //         searchInput.style.border = `1px solid black`
+    //         document.querySelector("#pop").style.color = "white"
+    //     }
+    // })
 
